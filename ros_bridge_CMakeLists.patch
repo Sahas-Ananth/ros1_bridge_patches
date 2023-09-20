@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5f878af..d33e650 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -17,6 +17,10 @@ find_package(rclcpp REQUIRED)
+ find_package(rmw_implementation_cmake REQUIRED)
+ find_package(std_msgs REQUIRED)
+ 
++# Sahas Changes Start.
++add_definitions(-DBOOST_BIND_GLOBAL_PLACEHOLDERS)
++# Sahas Changes End.
++
+ # find ROS 1 packages
+ set(cmake_extras_files cmake/find_ros1_package.cmake cmake/find_ros1_interface_packages.cmake)
+ include(cmake/find_ros1_package.cmake)
